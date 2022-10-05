@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Space Grotesk', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  position: absolute;
+}
+
+#bg-img-ss {
+  display: none;
+}
+
+#bg-img-xs {
+  min-height: 100vh;
+  max-width: 28%;
+  left: 0;
+}
+
+.card-display {
+  display: flex;
+  position: absolute;
+  left: 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-back-img,  .card-front-img{
+  max-width: 19em;
+  box-shadow: rgb(0, 0, 0, 0.6) 5px 8px 4px;
+  border-radius: 12px;
+}
+
+.card-back, .card-front {
+  position: relative;
+}
+
+.card-back > *, .card-front > * {
+  position: absolute;
+}
+
+#card-logo {
+  left: 1em;
+  top: 1em;
+  max-width: 4em;
+}
+
+.card-back {
+  top: 20em;
+  left: 10em;
+}
+
+.card-front {
+  top: 8em;
+  left: 7em;
+}
+
+.card-back-img, .card-front-img {
+  min-width: 50%;
+}
+
+#cvc {
+  top: 4.5em;
+  left: 15em;
+}
+
+#card-infonum {
+  position: relative;
+  left: 1.2em;
+  top: 3.5em;
+  font-size: 1.5em;
+}
+
+#card-infoname {
+  position: relative;
+  font-size: small;
+  top: 9em;
+  left: 3em;
+}
+
+#card-infodate {
+  position: relative;
+  font-size: small;
+  top: 7.6em;
+  left: 20.9em;
+}
+
+.card-form {
+  position: absolute;
+  display: grid;
+  width: 40%;
+  margin: 2em;
+  gap: 1em;
+  color: hsl(278, 68%, 11%);
+  font-weight: 700;
+  top: 6em;
+}
+
+.input {
+  width: 100%;
+  max-height: 2.5em;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  font-size: large;
+  border: 2px solid  hsl(270, 3%, 87%);
+   text-transform: capitalize;
+}
+
+.input:focus {
+  outline: none;
+  color: hsl(278, 68%, 11%);
+  border: 1px solid hsl(278, 94%, 30%);
+  transition: 0.1s ease-in;
+}
+
+#date {
+  display: flex;
+}
+
+.info {
+  max-width: 22%;
+  margin-right: 0.5em;
+}
+
+#date :nth-child(2) {
+  margin-right: 1.5em;
+}
+
+.error {
+  font-size: 15px;
+  color: hsl(0, 100%, 66%);
+  display: none;
+}
+
+button {
+  padding: 1em;
+  border-radius: 8px;
+  font-size: large;
+  color: hsl(0, 0%, 100%);
+  background: hsl(278, 68%, 11%);
+  border: 1px solid hsl(278, 68%, 11%);
+}
+
+button:hover {
+  color: hsl(278, 68%, 11%);
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(278, 68%, 11%);
+  transition: 0.2s ease-in;
+}
+
+.attribution {
+  position: absolute;
+  width: auto;
+  justify-content: center;
+  right: 25%;
+  bottom: -10%;
+  margin: auto;
+}
+
+.submited {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  gap: 1em;
+  max-width: 50%;
+}
+
+.submited p {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+#continue {
+  padding: 0.7em 6em;
+}
+
+@media (max-width: 54em) {
+  #bg-img-ss {
+    height: 12em;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+  }
+
+  body {
+    min-width: 100%;
+    justify-content: center;
+    padding: 2em;
+    font-size: 1em;
+    position: none;
+  }
+
+  #bg-img-xs {
+    display: none;
+  }
+
+  .card-back {
+    top: 4em;
+  }
+
+  .card-front {
+    left: 3em;
+  }
+
+  #card-infoname {
+    top: 8em;
+    left: 2.5em;
+  }
+  
+  #card-infodate {
+    top: 6.7em;
+    left: 18.4em;
+  }
+
+  .card-form {
+    display: grid;
+    width: 85%;
+    top: 20em;
+    right: 0.5em;
+    margin: 4%;
+  }
+  
+  .info {
+    min-width: 30%;
+    margin-right: 0.5em;
+  }
+
+    
+  #date :nth-child(2) {
+    margin-right: 0.5em;
+  }
+
+  .submited {
+    top: 55%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 540px) {
+  .card-display {
+    width: 50%;
+  }
+  
+  .card-front, .card-back {
+    font-size: 80%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  
+#card-infonum {
+  position: relative;
+  left: 1.2em;
+  top: 3.5em;
+  width: max(170%, 1.6em);
+}
+
+#card-infoname {
+  position: relative;
+  font-size: small;
+  top: 6.5em;
+  left: 2em;
+}
+
+  #card-infodate {
+    left: 14.2em;
+    top: 5.4em;
+  }
+
+  .card-back {
+    left: 9em;
+  }
+
+  .card-front {
+    left: 5em;
+    top: 5.5em;
+  }
+
+  .card-form {
+    top: 42%;
+  }
+
+  .attribution {
+    right: 0.8em;
+    font-size: 0.9em;
+  }
+
+  .submited {
+    top: 45%;
+    max-width: none;
+    left: 13%;
+  }
+}

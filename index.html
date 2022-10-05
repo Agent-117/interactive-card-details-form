@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Grotesk">
+</head>
+<body>
+  <div class="container">
+    <img src="images/bg-main-mobile.png" alt="" class="bg-img" id="bg-img-ss">
+    <img src="images/bg-main-desktop.png" alt="" class="bg-img" id="bg-img-xs">
+
+    <!--CARD-DISPLAY-->
+
+    <div class="card-display">
+      <div class="card-back">
+        <img src="images/bg-card-back.png" alt="" class="card-back-img">
+        <p id="cvc">000</p>
+      </div>
+      <div class="card-front">
+        <img src="images/bg-card-front.png" alt="" class="card-front-img">
+        <img src="images/card-logo.svg" alt="" id="card-logo">
+        <p id="card-infonum">0000 0000 0000 0000</p>
+        <p id="card-infoname">JANE APPLESEED</p>
+        <p id="card-infodate"><span id="month">00</span>/<span id="year">00</span></p>
+      </div>
+    </div>
+
+    <!--CARD-FORM-->
+
+    <div class="card-form">
+
+      <div>
+       <span>CARDHOLDER NAME</span>
+       <input type="text" placeholder="e.g. Jane Appleseed" id="input-name" class="input">
+      </div>
+    
+      <div>
+       <span>CARD NUMBER</span>
+       <input type="tel" placeholder=" e.g. 1234 5678 9123 0000" id="input-num" class="input" maxlength="19">
+       <span id="error-card-no" class="error">Wrong format, numbers only</span>
+      </div>
+
+
+      <div id="date">
+
+        <div class="info">
+          <span>Exp. Date</span>
+          <input type="tel" placeholder="MM" id="input-month" class="input" maxlength="2">
+          <span id="error-date" class="error">Can't be blank</span>
+        </div>
+
+        <div class="info">
+          <span>(MM/YY)</span>
+          <input type="tel" placeholder="YY" id="input-year" class="input" maxlength="2">
+        </div>
+
+        <div>
+          <span>CVC</span>
+          <input type="tel" placeholder="e.g. 123" id="input-cvc" class="input" maxlength="3">
+          <span id="error-cvc" class="error">Can't be blank</span>
+
+        </div>
+
+        </div>
+        <button type="submit" id="submit">Confirm</button>
+        
+      </div>
+
+          
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Adetunji Taiwo</a>
+  </div>
+
+      <div class="submited">
+        <img src="images/icon-complete.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
+      </div>
+  
+    </div>
+    
+      <script src="app.js"></script>
+</body>
+</html>
